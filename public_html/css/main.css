@@ -1,0 +1,910 @@
+body{
+    background:#FFFFFF;
+}
+
+/*------------------------шапка-----------------------------------*/
+
+.header * {
+    box-sizing: border-box;
+}
+
+.header{
+    display: grid;
+    grid-template-columns: 502px 211px 105px 105px;
+    grid-column-gap: 55px;
+    padding: 30px 200px;
+}
+
+.logo_block {
+    display: flex; /*выравнивание элементов в строку*/
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100px;
+    height: 45px;
+}
+
+.logo:hover{
+    cursor: pointer; 
+}
+
+.text_logo{
+    font-family: 'Mplus 1p';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px; /*междустрочный интервал*/
+    letter-spacing: 0.02em; /*увеличивает или уменьшает интервал между символами в тексте*/
+    text-transform: uppercase; /*управляет регистром текста. "uppercase" - преобразует все символы в верхний регистр*/
+    color: #323A49;
+} 
+
+.bigText_logo{
+    font-family: 'Mplus 1p ExtraBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 23px;
+    line-height: 34px;
+    text-transform: uppercase;
+    color: #323A49;
+}
+
+.eye_block{
+    display: flex;
+}
+
+.eye_block:hover{
+    text-decoration: underline;
+    color: #275BA8;
+    cursor: pointer; 
+}
+
+.oldVersion_block{
+    display: flex;
+}
+
+.oldVersion_block:hover{
+    text-decoration: underline;
+    color: #275BA8;
+    cursor: pointer; 
+}
+
+.eye{
+    margin-right: 10px;
+    width: 21px;
+    height: 21px;
+}
+
+.oldVersion{
+    margin-right: 10px;
+    width: 21px;
+    height: 21px;
+}
+
+.text_eye {
+    width: 180px;
+    height: 21px;
+    font-family: 'Mplus 1p';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #275BA8;
+}
+
+.text_oldVersion{
+    width: 142px;
+    height: 21px;
+    font-family: 'Mplus 1p';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #275BA8;
+}
+
+.reception_block{
+    width: 105px;
+    height: 43px;
+    display: flex;
+}
+
+.reception_block:hover{
+    cursor: pointer; 
+}
+
+.envelope{
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+}
+
+.text_reception{
+    width: 69px;
+    height: 42px;
+    font-family: 'Mplus 1p Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #323A49;
+}
+
+.personalAcc_block{
+    width: 104px;
+    height: 44px;
+    display: flex;
+}
+
+.personalAcc_block:hover{
+    cursor: pointer; 
+}
+
+.personalAcc{
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+}
+
+.text_personalAcc{
+    width: 68px;
+    height: 42px;
+    font-family: 'Mplus 1p Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #334059;
+}
+
+/*------------------------меню------------------------------------*/
+   
+*,
+*::after,
+*::before {
+    /*::after - псевдоэлемент, который используется для вывода желаемого текста после содержимого элемента, к которому он добавляется*/
+    /*::before - псевдоэлемент, который добавляет определённое содержимое перед каждым указанным элементом*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.mainmenu {
+    width: 100%;
+    background: #275BA8;
+    position: relative; /*позиционированный элемент смещается относительно его текущей позиции (отрицательное значение смещает элемент влево, положительное значение вправо*/
+    overflow: hidden; /*указывает, что произойдёт, если содержимое переполняет размеры элемента. "hidden" - переполнение обрезается (контент, который выходит за размеры будет невидимым)*/
+    /* height: 50px; */
+}
+.mainmenu ul {
+    list-style: none; /*убираем маркеры списка*/
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: 50%;
+    float: left; /*элемент становится плавающим и смещается по левому краю (остальные элементы обтекают его по правой стороне)*/
+    font-family: 'Mplus 1p Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    flex: none;
+    flex-grow: 0;
+    height: 50px
+}
+.mainmenu ul li {
+    position: relative;
+    left: -50%;
+    float: left;
+    height: 50px
+}
+.mainmenu ul li a {
+    color: #fff;
+    display: block; /*Отображает элемент как блочный элемент*/
+    text-decoration: none; /*свойство text-decoration добавляет декорирование текста (подчеркивание, перечеркивание, линия над текстом). "none" - определяет нормальный текст (без декорирования)*/
+    padding: 0 30px;
+    line-height: 50px;
+    border: 1px solid #386ebe; /*добавляем бордюр*/
+}
+
+.mainmenu ul li a:hover {
+    background-color: #386ebe;
+    cursor: pointer;
+}
+
+.menu{
+    display: block;
+    text-decoration: none;
+    padding: 14px 30px;
+    line-height: 50px;
+    border: 1px solid #386ebe; /*добавляем бордюр*/
+}
+
+.menu:hover{
+    background-color: #386ebe;
+    cursor: pointer;
+}
+
+/* ---------------------------раздел--------------------------- */
+
+.section *{
+    box-sizing: border-box;
+}
+
+.section{
+    display: grid;
+    grid-template-columns: 130px;
+    grid-row-gap: 15px;
+    padding: 30px 200px;
+}
+
+.section_block{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 130px;
+    height: 16px;
+}
+
+.text_Msection{
+    width: 46px;
+    height: 16px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #858C9C;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.text_Msection:hover{
+    cursor: pointer; 
+}
+
+.text_Ssection{
+    width: 5px;
+    height: 16px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #858C9C;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.text_Nsection{
+    width: 49px;
+    height: 16px;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #858C9C;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.text_Nsection:hover{
+    cursor: pointer; 
+}
+
+/* ----------------------название раздела-------------------- */
+
+.sectionName *{
+    box-sizing: border-box;
+}
+
+.sectionName {
+    display: grid;
+    grid-template-columns: 125px;
+    padding: 0px 200px;
+}
+
+.sectionName_block{
+    display: flex;
+    flex-direction: row;
+}
+
+.sectionName_text{
+    height: 39px;
+    font-family: 'Mplus 1p Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 39px;
+}
+
+/* --------------------фильтр новостей-------------------------- */
+
+.newsFilter *{
+    box-sizing: border-box;
+}
+
+.newsFilter{
+    display: grid;
+    grid-template-columns: 120px;
+    padding: 30px 200px;
+    height: 61px;
+}
+
+.newsFilter_block{
+    display: flex;
+}
+
+.Filter_allNews{
+    background: #F4F8FD;
+}
+
+.Filter_allNews:hover{
+    text-decoration: underline;
+    color: #275BA8;
+    cursor: pointer; 
+}
+
+.text_Filter_allNews{
+    width: 120px;
+    font-family: 'Mplus 1p Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: #275BA8;
+    padding: 20px 17px;
+}
+
+.Filter_yearNews:hover{
+    text-decoration: underline;
+    color: #275BA8;
+    cursor: pointer; 
+}
+
+.text_Filter_yearNews{
+    font-family: 'Mplus 1p';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: #858C9C;
+    padding: 20px 20px;
+}
+
+.line{
+    width: 1110px;
+    height: 0px;
+    left: 405px;
+    top: 367px;
+    border-top: 1px solid #C7D0E2;
+}
+
+/* ------------------------------новости--------------------------------- */
+
+.news * {
+    box-sizing: border-box;
+}
+
+.news{
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    column-gap: 30px;
+    row-gap: 30px;
+    padding: 60px 200px;
+}
+
+.article_block{
+    overflow: hidden; /*Переполнение обрезается (контент, который выходит за размеры будет невидимым)*/
+}
+
+.date{
+    font-family: 'Mplus 1p';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #858C9C;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.title{
+    width: 350px;
+    font-family: 'Mplus 1p Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    color: #323A49;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.title:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.preview{
+    width: 350px;
+    font-family: 'Mplus 1p';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #323A49;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+} 
+
+/* -----------------------кнопка "показать ещё"--------------------------- */
+
+.btn{
+    width: 1110px;
+    height: 50px;
+    font-family: 'Mplus 1p Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    background: #FFFFFF;
+    color: #275BA8;
+    border: 1px solid #E9EFF2;
+}
+
+.btn:hover {
+    background: #275BA8;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+/* ----------------------------пагинация--------------------------------- */
+
+.news * {
+    box-sizing: border-box;
+}
+
+.pagination ul{
+    display: inline-block; /*"Блочно-строчные" элементы - позволяет задавать размеры, рамки, отступы, как и блочным элементам, ширина зависит от содержания (не растягивается на всю ширину контейнера), выравниваются вертикально как и строчные элементы*/
+    /* margin-top: 20px; */
+    position: relative;
+    left: 50%;
+}
+
+.pagination ul li {
+    display: inline; /*Элемент отображается как строчный (inline) элемент*/
+    position: relative;
+    left: -50%;
+}
+
+.pagination ul li a {
+    box-sizing: border-box;
+    border: 1px solid #E9EFF2;
+    border-radius: 2px;
+    color: #323A49;
+    float: left;
+    padding: 3px 10px;
+    text-decoration: none;
+    font-family: 'Mplus 1p';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center; 
+    margin: 0 3px;
+}
+
+.pagination img{
+    box-sizing: border-box;
+    border: 1px solid #E9EFF2;
+    border-radius: 2px;
+    float: left;
+    padding: 7.5px 10px;
+    margin: 0 3px;
+}
+
+.pagination ul li a:hover {
+    background: #275BA8;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.pagination img:hover {
+    background: #275BA8;
+    cursor: pointer;
+}
+
+/*-----------------------------футер----------------------------*/
+.footer *{
+    box-sizing: border-box;
+}
+
+
+.footer{
+    margin-top: 50px;
+    padding-bottom: 30px;
+    background: #F4F8FD;
+}
+
+.before_line * {
+    box-sizing: border-box;
+}
+
+.before_line{
+    display: grid;
+    grid-template-columns: 190px 160px 230px 310px;
+    column-gap: 80px;
+    padding: 0px 200px;
+}
+
+.footer_block{
+    padding-top: 40px;
+    height: 320px;
+}
+
+.section_title{
+    font-family: 'Mplus 1p Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #323A49;
+    padding-bottom: 10px;
+}
+
+.section_title:hover{
+    color: #275BA8;
+    cursor: pointer;
+}
+
+.subsection_title{
+    font-family: 'Mplus 1p';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 27px;
+    color: #323A49;
+}
+
+.subsection_title:hover{
+    color: #275BA8;
+    cursor: pointer;
+}
+
+.padding_text{
+    padding-top: 10px;
+}
+
+.line_footer{
+    width: 1110px;
+    border-top: 2px solid #C7D0E2;
+    margin: 0px 200px;
+}
+
+.after_line * {
+    box-sizing: border-box;
+}
+
+.after_line{
+    display: grid;
+    grid-template-columns: 370px 325px 170px;
+    column-gap: 125px;
+    padding: 0px 200px;
+}
+
+.outside{
+    padding-top: 30px;
+}
+
+.Flogo{
+    width: 50px;
+    height: 23px;
+}
+
+.Flogo:hover{
+    cursor: pointer;
+}
+
+.FL{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bigText_Flogo{
+    font-family: 'Mplus 1p ExtraBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #323A49;
+}
+
+.text_persData{
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    text-decoration-line: underline;
+    color: #323A49;
+}
+
+.text_persData:hover{
+    color: #275BA8;
+    cursor: pointer;
+}
+
+.text_creatWeb{
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #858C9C;
+}
+
+.text_years{
+    font-family: 'Mplus 1p';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #858C9C;
+    text-align: right;
+    padding-top: 5px;
+}
+
+/*-----------------адаптивный дизайн для планшета-----------------*/
+
+@media only screen and (max-width: 992px) {    
+    .header{
+        background: #275BA8;
+        padding: 0px 20px;
+        grid-template-columns: 346px 94px 80px;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .text_logo{
+        display: none;
+    }
+
+    .bigText_logo{
+        font-family: 'Mplus 1p ExtraBold';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding-top: 10px;
+    }
+
+    .eye_oldVersion{
+        display: none;
+    }
+
+    .envelope{
+        display: none;
+    }
+
+    .text_reception{
+        font-family: 'Mplus 1p Medium';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: #FFFFFF;
+    }
+
+    .personalAcc{
+        display: none;
+    }
+    
+    .text_personalAcc{
+        font-family: 'Mplus 1p Medium';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: #FFFFFF;
+    }
+
+    .mainmenu{
+        display: none;
+    }
+
+    .section{
+        padding: 10px 20px;
+    }
+
+    .sectionName{
+        padding: 0px 20px 10px 20px;
+    }
+
+    .newsFilter{
+        padding: 0px 20px;
+    }
+
+    .line{
+        padding: 0px 20px;
+        width: 730px
+    }
+
+    .news{
+        padding: 30px 20px;
+        display: grid;
+        grid-template-columns: 350px 350px;
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+
+    .btn{
+        width: 730px;
+        padding: 0px 20px;
+    }
+
+    .before_line{
+        padding: 0px 20px;
+        grid-template-columns: 160px 160px 160px 160px;
+        column-gap: 30px;
+    }
+
+    .footer_block{
+        height: 340px;
+        margin-bottom: 30px;
+    }
+    
+    .section_title{
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .subsection_title{
+        line-height: 21px;
+    }
+
+    .line_footer{
+        margin: 0px 20px;
+        width: 730px;
+    }
+
+    .after_line{
+        display: table;
+        text-align: center;
+    }
+
+    .outside{
+        padding-top: 20px;
+    }
+
+    .bigText_Flogo{
+        padding: 0px 0px 10px 10px;
+    }
+
+    .text_years{
+        text-align: center;
+        padding-right: 40px;
+    }
+    
+}
+
+/*-----------------адаптивный дизайн для телефона-----------------*/
+
+/* 320px - 576px */
+@media only screen and (max-width: 576px) {
+    .sectionName_text{
+        font-size: 21px;
+        line-height: 32px;
+    }
+
+    .newsFilter{
+        height: auto;
+    }
+
+    .text_Filter_allNews{
+        padding: 12px 17px;
+    }
+
+    .text_Filter_yearNews{
+        padding: 12px 17px;
+    }
+    
+    .line{
+        padding: 0px 20px;
+        width: 290px
+    }
+
+    .news{
+        padding: 30px 20px;
+        display: grid;
+        grid-template-columns: 290px;
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+    
+    .article{
+        width: 290px;
+    }
+
+    .title{
+        width: 290px;
+    }
+
+    .title{
+        width: 290px;
+    }
+
+    .btn{
+        width: 290px;
+        padding: 0px 20px;
+    }
+
+    .before_line{
+        grid-template-columns: 290px;
+    }
+
+    .footer_block{
+        height: auto;
+        padding: 0px;
+        margin-bottom: 20px;
+    }
+
+    .subsection_title{
+    font-size: 12px;
+    line-height: 18px;
+    }
+
+    .line_footer{
+        margin: 0px 20px;
+        width: 290px;
+    }
+
+    .after_line{
+        display: table;
+        text-align: center;
+        padding: 0px 0px;
+    }
+
+    .FL{
+        display: table;
+    }
+
+    .Flogo{
+        margin-left: 30px;
+    }
+
+    /* .outside{
+        padding-top: 20px;
+    } */
+
+    .bigText_Flogo{
+        display: none;
+    }
+
+    .text_years{
+        text-align: center;
+        padding: 20px 0px 0px 30px;
+    }
+}

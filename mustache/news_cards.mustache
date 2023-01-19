@@ -1,0 +1,23 @@
+<section class="news">
+    {{#article_block}}
+        <div class="article_block">
+            {{#image}}
+                <div class="image_news">
+                    <img src="{{.}}" class="article" alt="Электрик">
+                </div>
+            {{/image}}
+            {{^image}}
+                <div class="card_stub">Изображение отсутствует</div>
+            {{/image}}
+            <div class="text_article">
+                <p class="date">{{date}}</p>
+                <p class="title">{{title}}</p>
+                <p class="preview">{{preview}}</p>
+            </div>
+        </div>
+    {{/article_block}}
+    <!-- кнопка "показать ещё" -->
+    <div class="btn_block">
+        <button class="btn">{{btn}}</button>
+    </div>
+</section>
